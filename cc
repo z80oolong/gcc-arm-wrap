@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 # gcc wrapper script for ARM architecture.
+# This script program removes "-march=native" and "-mcpu=native" from the gcc option.
 
 def debug(path, command, argv)
   return if (logfile = ENV["HOMEBREW_GCC_WRAP_LOG"].to_s).empty?
