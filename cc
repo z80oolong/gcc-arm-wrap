@@ -2,7 +2,7 @@
 
 # gcc wrapper script for ARM architecture.
 
-def debug_log(path, command, argv)
+def debug(path, command, argv)
   return if (logfile = ENV["HOMEBREW_GCC_WRAP_LOG"].to_s).empty?
 
   File.open(logfile, "a+") do |f|
@@ -20,12 +20,15 @@ ccache_libexec = "#{ENV["HOMEBREW_PREFIX"]}/opt/ccache/libexec"
 
 path = ENV["PATH"].split(":")
 path.delete(dir)
-path.unshift(ccache_libexec) unless path.first == ccache_libexec
+if (path.first != ccache_libexec) && (ENV["HOMEBREW_USE_CCACHE"].to_s == "1")
+  path.unshift(ccache_libexec)
+end
+
 ENV["PATH"] = path.join(":")
 
 command = %x[/usr/bin/env which #{base}].chomp
 ARGV.delete("-march=native"); ARGV.delete("-mcpu=native")
 
-debug_log(path, command, ARGV)
+debug(path, command, ARGV)
 
 exec command, *ARGV
