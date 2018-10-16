@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# Copyright (C) 2018 by Z.OOL. (mailto:zool@zool.jpn.org)
+#
 # gcc wrapper script for ARM architecture.
 # This script program removes "-march=native" and "-mcpu=native" from the gcc option.
 

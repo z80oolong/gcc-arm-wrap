@@ -1,5 +1,6 @@
 class GccArmWrap < Formula
-  url "git://git@bitbucket.org/z80oolong/gcc-arm-wrap.git", :revision => "master"
+  url "https://z80oolong@bitbucket.org/z80oolong/gcc-arm-wrap.git",
+    :revision => "3fe2207bd7103283031e17f4583539d9684ba811"
   version "0.1"
 
   conflicts_with "apple-gcc42", :because => "Both install `gcc`, `g++` and etc."
