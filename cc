@@ -5,14 +5,16 @@
 # gcc wrapper script for ARM architecture.
 # This script program removes "-march=native" and "-mcpu=native" from the gcc option.
 
-def debug(path, command, argv)
+def debug(number, path, command, argv)
   return if (logfile = ENV["HOMEBREW_GCC_WRAP_LOG"].to_s).empty?
 
+  t = Time.now.strftime("%Y/%m/%d %H:%M:%S")
+
   File.open(logfile, "a+") do |f|
-    msg =  "[gcc-arm-wrap]: PATH = #{path.inspect}\n"
-    msg << "[gcc-arm-wrap]: command = #{command.inspect}\n"
-    msg << "[gcc-arm-wrap]: ARGV = #{argv.inspect}\n"
-    msg << "[gcc-arm-wrap]: Execute #{command} #{argv.join(' ')}\n\n"
+    msg =  "[gcc-arm-wrap (#{number}) #{t}]: PATH = #{path.inspect}\n"
+    msg << "[gcc-arm-wrap (#{number}) #{t}]: command = #{command.inspect}\n"
+    msg << "[gcc-arm-wrap (#{number}) #{t}]: ARGV = #{argv.inspect}\n"
+    msg << "[gcc-arm-wrap (#{number}) #{t}]: Execute #{command} #{argv.join(' ')}\n\n"
     f.write(msg)
   end
 end
