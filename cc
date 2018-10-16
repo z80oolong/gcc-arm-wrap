@@ -22,18 +22,19 @@ end
 command = $0
 dir = File.dirname(command); base = File.basename(command)
 ccache_libexec = "#{ENV["HOMEBREW_PREFIX"]}/opt/ccache/libexec"
-
 path = ENV["PATH"].split(":")
+
+debug(0, path, command, ARGV)
+
 path.delete(dir)
 if (path.first != ccache_libexec) && (ENV["HOMEBREW_USE_CCACHE"].to_s == "1")
   path.unshift(ccache_libexec)
 end
-
 ENV["PATH"] = path.join(":")
 
 command = %x[/usr/bin/env which #{base}].chomp
 ARGV.delete("-march=native"); ARGV.delete("-mcpu=native")
 
-debug(path, command, ARGV)
+debug(1, path, command, ARGV)
 
 exec command, *ARGV
