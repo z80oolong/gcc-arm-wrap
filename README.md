@@ -38,15 +38,15 @@ gcc ラッパースクリプト ```cc``` を [Linuxbrew][BREW] に導入する�
 
 ## 謝辞
 
-ARM アーキテクチャにおける Linuxbrew の異常終了の問題の概要及びその回避については、 [Mokutsumo][MOKU] 氏によるブログ "[自己実現武呂具][MBLG]" の記事の "[printipiのコンパイルで \*\*\* Error in 'g++': double free or corruption (top): 0x01099c18 \*\*\*][MBL1]" を参考にしました。 [Mokutsumo][MOKU] 氏には心より感謝致します。
+ARM アーキテクチャにおける [Linuxbrew][BREW] の異常終了の問題の概要及びその回避については、 [Mokutsumo][MOKU] 氏によるブログ "[自己実現武呂具][MBLG]" の記事の "[printipiのコンパイルで \*\*\* Error in 'g++': double free or corruption (top): 0x01099c18 \*\*\*][MBL1]" を参考にしました。 [Mokutsumo][MOKU] 氏には心より感謝致します。
 
 また、 [Linuxbrew][BREW] 本体のリポジトリの開発を行っている [Shaun Jackman 氏][SHAU]を始めとする [Linuxbrew][BREW] の開発コミュニティの各氏に心より感謝致します。
 
-そして最後に、 [Debian noroot 環境][DBNR]と [Linuxbrew][BREW] の全ての事に関わる全ての皆様に心より感謝致します。
+そして最後に、 [Linuxbrew][BREW] の全ての事に関わる全ての皆様に心より感謝致します。
 
 ## 使用条件
 
-本リポジトリは [Linuxbrew][BREW] において使用するラッパースクリプトとして、 [Z.OOL. (mailto:zool@zool.jpn.org)][ZOOL] が著作権を有し、[Linuxbrew][BREW] のライセンスと同様である [BSD 2-Clause License][BSD2] に基づいて配布されるものとします。詳細については、本リポジトリに同梱する ```LICENSE``` を参照して下さい。
+本リポジトリは [Linuxbrew][BREW] において使用するラッパースクリプトとして、 [Z.OOL. (mailto:zool@zool.jpn.org)][ZOOL] が著作権を有し、 [MIT License][MITL] に基づいて配布されるものとします。詳細については、本リポジトリに同梱する ```LICENSE``` を参照して下さい。
 
 <!-- 外部リンク一覧 -->
 
@@ -56,5 +56,5 @@ ARM アーキテクチャにおける Linuxbrew の異常終了の問題の概�
 [MBLG]:http://blog.livedoor.jp/mokutsuno/
 [MBL1]:http://blog.livedoor.jp/mokutsuno/archives/15701412.html
 [SHAU]:http://sjackman.ca/
-[BSD2]:https://opensource.org/licenses/BSD-2-Clause
+[MITL]:https://opensource.org/licenses/mit-license.php
 [ZOOL]:http://zool.jpn.org/
